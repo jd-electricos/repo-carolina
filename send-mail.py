@@ -3,6 +3,7 @@ import time
 import win32com.client as win32
 import os
 import random
+from datetime import datetime, timedelta
 
 # ------------------------------
 # Rutas absolutas
@@ -76,20 +77,32 @@ for i, cliente in enumerate(clientes):
     # Enviar correo
     mail.Send()
     print(f"✔ Correo enviado a: {nombre_cliente} -> {correo_cliente}")
+    
+    
+    # ----------------------------------------
+    # 🔍 Verificación de hora límite (5:30 PM)
+    # ----------------------------------------
+    hora_actual = datetime.now()  # hora local del equipo (Colombia)
+    hora_limite = hora_actual.replace(hour=17, minute=30, second=0, microsecond=0)
+
+    if hora_actual > hora_limite:
+        print("⛔ Envío detenido: Se alcanzó el límite horario (5:30 pm).")
+        print(f"🛑 Último correo enviado fue: {nombre_cliente} -> {correo_cliente}")
+        break
 
     # Espera para evitar bloqueos
     
     # ------------------------------
     # tiempo de espera para pruebas
-    time.sleep(3)
+    # time.sleep(3)
     # ------------------------------
     
     # ------------------------------
     # tiempo de espera para producción
     
-    # wait_time = random.uniform(120, 300)  # segundos
-    # print(f"⏱ Esperando {wait_time/60:.2f} minutos antes del siguiente envío...")
-    # time.sleep(wait_time)
+    wait_time = random.uniform(120, 300)  # segundos
+    print(f"⏱ Esperando {wait_time/60:.2f} minutos antes del siguiente envío...")
+    time.sleep(wait_time)
     # ------------------------------
 
 print("\n🎉 Todos los correos fueron enviados exitosamente.")
