@@ -81,15 +81,15 @@ for i, cliente in enumerate(clientes):
     
     # ------------------------------
     # tiempo de espera para pruebas
-    # time.sleep(3)
+    time.sleep(3)
     # ------------------------------
     
     # ------------------------------
     # tiempo de espera para producción
     
-    wait_time = random.uniform(120, 300)  # segundos
-    print(f"⏱ Esperando {wait_time/60:.2f} minutos antes del siguiente envío...")
-    time.sleep(wait_time)
+    # wait_time = random.uniform(120, 300)  # segundos
+    # print(f"⏱ Esperando {wait_time/60:.2f} minutos antes del siguiente envío...")
+    # time.sleep(wait_time)
     # ------------------------------
 
 print("\n🎉 Todos los correos fueron enviados exitosamente.")
