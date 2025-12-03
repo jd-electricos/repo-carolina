@@ -1,0 +1,12 @@
+{
+  "asesor": "Andres Lopez",
+  "correoAsesor": "sistemas@jdelectricos.com.co",
+  "numeroAsesor": "310 802 32 77",
+  "datosClientes": [
+    { "nombre": "andres 1", "correo": "abicdev26@gmail.com" },
+    { "nombre": "andres 2", "correo": "abicdev26@gmail.com" },
+    { "nombre": "andres 3", "correo": "abicdev26@gmail.com" }
+
+
+  ]
+}
