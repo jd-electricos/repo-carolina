@@ -3,7 +3,6 @@
   "correoAsesor": "juanmoreno@jdelectricos.com.co",
   "numeroAsesor": "323 225 74 26",
   "datosClientes": [
-        { "nombre": "RICARDO NAVARRO", "correo": "admon@distemaco.com.co" },
         { "nombre": "DIEGO ARMANDO BARRETO MOGOLLON", "correo": "diego.barreto@distrielectricosbkm.com" },
         { "nombre": "CESAR ARCILA", "correo": "cesar.arcila@dominion-global.com" },
         { "nombre": "MILTON CESAR AVILA ROMERO", "correo": "proyectos@dyminelgroup.com.co" },
